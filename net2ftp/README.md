@@ -17,6 +17,9 @@ running on Apache and Centos 6.4.
 Recommended usage
 -----------------
 
+This container is available in
+[the Docker registry](https://index.docker.io/u/jumanjiman/).
+
 To run the container and make it available at port 80:
 
     docker run -d -p 80:80 -h foo.example.com jumanjiman/net2ftp
