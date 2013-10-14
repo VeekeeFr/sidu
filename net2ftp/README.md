@@ -29,6 +29,17 @@ To run the container and make it available at port 81:
     docker run -d -p 81:80 -h foo.example.com jumanjiman/net2ftp
 
 
+Known issues
+------------
+
+**Use this container for anonymous ftp sessions only!**
+This container does not yet implement SSL.
+Perhaps in the future I'll add Docker volume support to
+enable a person to use the container with an SSL private key
+and signed cert. For now, I'm playing with Docker, and
+net2ftp is an interesting project.
+
+
 License
 -------
 
