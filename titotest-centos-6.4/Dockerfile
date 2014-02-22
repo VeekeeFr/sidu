@@ -6,8 +6,8 @@ MAINTAINER Paul Morgan <jumanjiman@gmail.com>
 
 # Install dependencies.
 RUN yum -y install git rpm-build python-devel python-nose libxslt asciidoc python-setuptools tar
-RUN rpm -Uvh http://ftp.linux.ncsu.edu/pub/epel/6/i386/epel-release-6-8.noarch.rpm
-RUN yum -y install GitPython
+RUN rpm -Uvh http://ftp.linux.ncsu.edu/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
+RUN yum -y install GitPython python-pep8
 
 # Remove yum metadata.
 RUN yum clean all

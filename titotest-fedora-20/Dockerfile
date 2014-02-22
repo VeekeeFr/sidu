@@ -5,7 +5,9 @@ FROM mattdm/fedora:f20
 MAINTAINER Paul Morgan <jumanjiman@gmail.com>
 
 # Install dependencies.
-RUN yum -y install git GitPython rpm-build python-devel python-nose libxslt asciidoc python-setuptools tar
+RUN yum -y install git GitPython rpm-build libxslt tar \
+    python-devel python-nose python-setuptools python-pep8 \
+    python3-devel python3-nose python3-setuptools python3-pep8
 
 # Remove yum metadata.
 RUN yum clean all
