@@ -8,7 +8,7 @@ MAINTAINER Paul Morgan <jumanjiman@gmail.com>
 RUN rpm -Uvh http://mirror.es.its.nyu.edu/epel/5/x86_64/epel-release-5-4.noarch.rpm
 RUN yum -y install git GitPython rpm-build \
     python-devel python-nose python-setuptools python-pep8 \
-    libxslt asciidoc tar
+    libxslt asciidoc tar createrepo
 
 # Remove yum metadata.
 RUN yum clean all
