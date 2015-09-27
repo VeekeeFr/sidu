@@ -7,7 +7,7 @@ About
 SIDU is a web-based SQL client.
 
 This container has SIDU 5.0,
-running on Apache and Centos 6.4.
+running on Apache and Alpine Linux.
 
 * [Features](http://topnew.net/sidu/sidu-feature.php)
 * [Screenshots](http://topnew.net/sidu/sidu-screenshot.php)
