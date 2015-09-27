@@ -4,10 +4,13 @@ net2ftp
 About
 -----
 
+[![](https://badge.imagelayers.io/jumanjiman/net2ftp.svg)](https://imagelayers.io/?images=jumanjiman/net2ftp:latest 'View image size and layers')&nbsp;
+[![Docker Registry](https://img.shields.io/docker/pulls/jumanjiman/net2ftp.svg)](https://registry.hub.docker.com/u/jumanjiman/net2ftp)&nbsp;
+
 net2ftp is a web-based ftp client.
 
 This container has the full version of net2ftp, including plugins,
-running on Apache and Centos 6.4.
+running on Apache and Alpine Linux.
 
 * Enabled: [user features](http://www.net2ftp.com/homepage/features-user.html)
 * Disabled: [admin features](http://www.net2ftp.com/homepage/features-administrator.html)
