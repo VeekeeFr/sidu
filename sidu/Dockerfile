@@ -11,6 +11,7 @@ RUN apk add --update \
       apache2 \
       php \
       php-apache2 \
+      php-mysql \
       && \
     rm -f /var/cache/apk/*
 
