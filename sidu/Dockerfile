@@ -12,6 +12,7 @@ RUN apk add --update \
       php \
       php-apache2 \
       php-mysql \
+      php-pgsql \
       && \
     rm -f /var/cache/apk/*
 
