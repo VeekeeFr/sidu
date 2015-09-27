@@ -4,9 +4,12 @@ DB Web GUI
 About
 -----
 
+[![](https://badge.imagelayers.io/jumanjiman/sidu.svg)](https://imagelayers.io/?images=jumanjiman/sidu:latest 'View image size and layers')&nbsp;
+[![Docker Registry](https://img.shields.io/docker/pulls/jumanjiman/sidu.svg)](https://registry.hub.docker.com/u/jumanjiman/sidu)&nbsp;
+
 SIDU is a web-based SQL client.
 
-This container has SIDU 5.0,
+This container has SIDU 5.3,
 running on Apache and Alpine Linux.
 
 * [Features](http://topnew.net/sidu/sidu-feature.php)
