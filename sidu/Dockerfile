@@ -15,7 +15,7 @@ RUN apk add --update \
     rm -f /var/cache/apk/*
 
 # Export name-version-release.
-ENV NVR sidu50
+ENV NVR sidu53
 
 # Install.
 ADD ${NVR}.md5sum /tmp/
