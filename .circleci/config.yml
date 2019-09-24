@@ -1,0 +1,36 @@
+version: 2
+
+machine:
+  services:
+    - docker
+  timezone: Europe/Paris
+
+jobs:
+
+  docker_release:
+    working_directory: /go/src/sidu
+    docker:
+      - image: docker:latest
+    steps:
+      - checkout:
+          path: /go/src/sidu
+      - setup_remote_docker
+      - run:
+          name: Build Docker image
+          command: |
+            cd sidu
+            CURRENT_RELEASE=`cat sidu.tag`
+            docker build -t ${DOCKERHUB_UID}/sidu:${CURRENT_RELEASE} -t ${DOCKERHUB_UID}/sidu:${CURRENT_RELEASE} .
+      - run:
+          name: DockerHub Release...
+          command: |
+            CURRENT_RELEASE=`cat sidu.tag`
+            docker login -e ${DOCKERHUB_EMAIL} -u ${DOCKERHUB_UID} -p ${DOCKERHUB_PWD}
+            docker push ${DOCKERHUB_UID}/sidu:${CURRENT_RELEASE}
+
+workflows:
+  version: 2
+  build_binary:
+    jobs:
+      - docker_release:
+          context: dockerhub
