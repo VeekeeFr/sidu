@@ -9,15 +9,13 @@ MAINTAINER VeekeeFr
 
 RUN apt-get update && \
     apt-get install -y \
-        zlib1g-dev
+        zlib1g-dev apt-utils
 
 RUN apt-get install -y \
-        libxml2-dev
+        libxml2-dev libzip-dev
 
 RUN /usr/local/bin/docker-php-ext-install mysqli pdo pdo_mysql zip xmlwriter
 RUN apt-get install libssl-dev -y
-
-
 
 RUN /usr/local/bin/docker-php-ext-install zip
 
