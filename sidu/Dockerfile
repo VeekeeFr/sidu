@@ -1,10 +1,9 @@
 # SIDU DB Web GUI
 # http://topnew.net/sidu/
 
-FROM alpine:3.2
+FROM alpine:latest
 
-# http://jumanjiman.github.io/
-MAINTAINER Paul Morgan <jumanjiman@gmail.com>
+MAINTAINER VeekeeFr
 
 # Install dependencies.
 RUN apk add --update \
@@ -18,20 +17,22 @@ RUN apk add --update \
     rm -f /var/cache/apk/*
 
 # Export name-version-release.
-ENV NVR sidu53
+ENV SIDU_VERSION sidu61
 
-# Install.
-ADD ${NVR}.md5sum /tmp/
+# Install
+ADD ${SIDU_VERSION}.md5sum /tmp/
 RUN cd /tmp/ && \
-    wget http://downloads.sourceforge.net/sidu/${NVR}.zip && \
-    md5sum -c ${NVR}.md5sum && \
-    unzip ${NVR}.zip && \
-    mv ${NVR}/* /var/www/localhost/htdocs/ && \
+    wget http://downloads.sourceforge.net/sidu/${SIDU_VERSION}.zip && \
+    md5sum -c ${SIDU_VERSION}.md5sum && \
+    unzip ${SIDU_VERSION}.zip && \
+    mv ${SIDU_VERSION}/* /var/www/localhost/htdocs/ && \
     chown -R root:apache /var/www/localhost/htdocs && \
     rm -fr /tmp/*
 
 # Start Apache.
 ENV LANG C
 EXPOSE 80
+
 ENTRYPOINT ["apachectl"]
+
 CMD ["-D", "FOREGROUND"]
