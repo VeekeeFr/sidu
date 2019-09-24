@@ -4,7 +4,6 @@ DB Web GUI
 About
 -----
 
-[![](https://badge.imagelayers.io/veekee/sidu.svg)](https://imagelayers.io/?images=veekee/sidu:latest 'View image size and layers')&nbsp;
 [![Docker Registry](https://img.shields.io/docker/pulls/veekee/sidu.svg)](https://registry.hub.docker.com/u/veekee/sidu)&nbsp;
 
 SIDU is a web-based SQL client.
@@ -41,5 +40,5 @@ This container does not yet implement SSL.
 License
 -------
 
-This project Dockerfile are licensed under MIT, and based on [jumanjiman's work](https://github.com/jumanjiman).
-[SIDU](http://topnew.net/sidu/) doesn't carry a license anymore.
+This project Dockerfile is licensed under MIT, and based on [jumanjiman's work](https://github.com/jumanjiman).
+[SIDU](http://topnew.net/sidu/) is licensed under [GNU General Public License version 2.0 (GPLv2)](https://sourceforge.net/directory/license:gpl/).
