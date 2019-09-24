@@ -26,7 +26,7 @@ RUN pecl install mcrypt-1.0.2
 RUN docker-php-ext-enable mcrypt
 
 # Install GD
-RUN apt-get install -y libfreetype6-dev libjpeg62-turbo-dev libpng12-dev
+RUN apt-get install -y libfreetype6-dev libjpeg62-turbo-dev libpng-dev
 RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/
 RUN docker-php-ext-install gd
 
