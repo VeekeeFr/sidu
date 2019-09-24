@@ -24,8 +24,9 @@ jobs:
       - run:
           name: DockerHub Release...
           command: |
+            cd sidu
             CURRENT_RELEASE=`cat sidu.tag`
-            docker login -e ${DOCKERHUB_EMAIL} -u ${DOCKERHUB_UID} -p ${DOCKERHUB_PWD}
+            docker login -u ${DOCKERHUB_UID} -p ${DOCKERHUB_PWD}
             docker push ${DOCKERHUB_UID}/sidu:${CURRENT_RELEASE}
 
 workflows:
