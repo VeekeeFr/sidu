@@ -34,11 +34,6 @@ RUN docker-php-ext-install gd
 RUN apt-get install -y libxslt-dev
 RUN docker-php-ext-install xsl
 
-# Install intl
-RUN apt-get install -y libicu-dev
-RUN pecl install intl
-RUN docker-php-ext-install intl
-
 RUN a2enmod rewrite
 RUN usermod -u 1000 www-data
 RUN usermod -G staff www-data
