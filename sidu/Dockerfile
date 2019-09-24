@@ -9,7 +9,7 @@ MAINTAINER VeekeeFr
 
 RUN apt-get update && \
     apt-get install -y \
-        zlib1g-dev apt-utils
+        zlib1g-dev apt-utils wget curl vim
 
 RUN apt-get install -y \
         libxml2-dev libzip-dev
