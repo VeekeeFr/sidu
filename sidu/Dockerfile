@@ -19,7 +19,6 @@ RUN apt-get install libssl-dev -y
 
 RUN /usr/local/bin/docker-php-ext-install zip
 
-
 # Install mcrypt
 RUN apt-get install -y libmcrypt-dev
 RUN pecl install mcrypt-1.0.2
@@ -46,7 +45,7 @@ ADD ${SIDU_VERSION}.md5sum /tmp/
 RUN cd /tmp/ && \
     wget http://downloads.sourceforge.net/sidu/${SIDU_VERSION}.zip && \
     md5sum -c ${SIDU_VERSION}.md5sum && \
+    mkdir -p /var/www/html && \
     unzip ${SIDU_VERSION}.zip && \
-    mv ${SIDU_VERSION}/* /var/www/localhost/htdocs/ && \
-    chown -R root:apache /var/www/localhost/htdocs && \
+    mv ${SIDU_VERSION}/* /var/www/html && \
     rm -fr /tmp/*
