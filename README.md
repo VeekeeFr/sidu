@@ -1,5 +1,12 @@
-dockerfiles
+SIDU
 ===========
+
+Software
+-----
+
+The is an Docker image for [SIDU](http://topnew.net/sidu/)
+
+SIDU is a FREE database client working via web browser. SIDU is a simple, intuitive and easy database admin tool. Simply copy SIDU to your website and run without any setup. Written in PHP.
 
 About
 -----
@@ -13,7 +20,7 @@ Repeatable builds for [Docker](http://www.docker.io/) containers.
 > public clouds and more.
 
 This is the source code for some containers that I publish in
-[the Docker registry](https://index.docker.io/u/jumanjiman/).
+[the Docker registry](https://index.docker.io/u/veekee/).
 
 In order to use these containerized apps, you need to have Docker
 [installed on your machine](http://www.docker.io/gettingstarted/#anchor-0).
@@ -28,7 +35,7 @@ To list Docker images on your machine, run:
 
 To throw away any of my containers, run:
 
-    docker rmi jumanjiman/<name-of-image>
+    docker rmi veekee/<name-of-image>
 
 To throw away cached copies of containers you no longer use:
 
